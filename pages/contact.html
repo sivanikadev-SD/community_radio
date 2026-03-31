@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch | SonicStream</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='2'%3E%3C/circle%3E%3Cpath d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'%3E%3C/path%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo">
+                <i data-lucide="radio"></i>
+                STREAM
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="../index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
+                        <a href="home2.html"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
+                    </div>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="dashboard-admin.html">Admin</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
+                        <a href="dashboard-dj.html"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
+                    </div>
+                </li>
+
+
+                <li class="mobile-only"><a href="login.html"><i data-lucide="log-in"></i> Login</a></li>
+                <li class="mobile-only"><a href="signup.html"><i data-lucide="user-plus"></i> Sign Up</a></li>
+                <li class="mobile-only">
+                    <hr style="opacity: 0.1; margin: 1rem 0;">
+                </li>
+                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                </li>
+                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="desktop-only flex gap-1">
+                    <a href="login.html" class="btn btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Login</a>
+                    <a href="signup.html" class="btn btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Sign Up</a>
+                </div>
+
+                <button id="rtl-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Switch RTL/LTR"><i
+                        data-lucide="arrow-right-left"></i></button>
+                <button id="theme-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Toggle Theme"><i
+                        data-lucide="moon"></i></button>
+
+                <button id="mobile-menu-toggle" class="mobile-toggle"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Header -->
+    <section class="section"
+        style="padding-top: 15rem; background-image: url('../assets/image/service.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container text-center reveal">
+            <h1 style="font-size: 5rem; margin-bottom: 2rem;">Let's Connect the <span>World</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Whether you're an
+                independent DJ or a global media network, we're here to help you scale your audio reach.</p>
+        </div>
+    </section>
+
+    <!-- 2. Contact Info Cards -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                <div class="glass-card reveal text-center">
+                    <i data-lucide="mail"
+                        style="width: 48px; height: 48px; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Email Inquiries</h4>
+                    <p style="color: var(--text-muted);">General: hello@sonicstream.com</p>
+                    <p style="color: var(--text-muted);">Support: help@sonicstream.com</p>
+                </div>
+                <div class="glass-card reveal text-center">
+                    <i data-lucide="phone"
+                        style="width: 48px; height: 48px; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Global Hubs</h4>
+                    <p style="color: var(--text-muted);">London: +44 20 7946 0000</p>
+                    <p style="color: var(--text-muted);">NYC: +1 212 555 0123</p>
+                </div>
+                <div class="glass-card reveal text-center">
+                    <i data-lucide="clock"
+                        style="width: 48px; height: 48px; color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Support Hours</h4>
+                    <p style="color: var(--text-muted);">Mon - Fri: 24/7 Response</p>
+                    <p style="color: var(--text-muted);">Weekend: Priority Tickets Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Support Channels (New Section) -->
+    <section class="section section-variant">
+        <div class="container">
+            <div class="section-title">
+                <h2>Join the Community</h2>
+                <p>Chat with our engineering team and other broadcasters in real-time.</p>
+            </div>
+            <div class="grid grid-2" style="max-width: 800px; margin: 0 auto;">
+                <div class="glass-card reveal flex gap-2" style="align-items: center;">
+                    <div style="background: #5865F2; padding: 1rem; border-radius: var(--radius-md); color: white;">
+                        <i data-lucide="message-square" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <div>
+                        <h5 style="margin:0;">Discord Server</h5>
+                        <p style="margin:0; font-size: 0.85rem; color: var(--text-muted);">Live help and beta features.
+                        </p>
+                    </div>
+                </div>
+                <div class="glass-card reveal flex gap-2" style="align-items: center;">
+                    <div style="background: #4A154B; padding: 1rem; border-radius: var(--radius-md); color: white;">
+                        <i data-lucide="slack" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <div>
+                        <h5 style="margin:0;">Slack Community</h5>
+                        <p style="margin:0; font-size: 0.85rem; color: var(--text-muted);">Networking for station
+                            owners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Form -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 5rem;">
+                <div class="reveal">
+                    <h2>Send a Direct Message</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Have a specific technical requirement or
+                        sales inquiry? Our dedicated team will get back to you within 24 hours.</p>
+                    <form class="auth-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="grid grid-2">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message Type</label>
+                            <select
+                                style="width: 100%; padding: 0.8rem; border-radius: var(--radius-sm); background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border);">
+                                <option>Technical Support</option>
+                                <option>Sales Inquiry</option>
+                                <option>Billing</option>
+                                <option>Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea rows="6" placeholder="How can we help you?"
+                                style="width: 100%; padding: 1rem; border-radius: var(--radius-md); background: var(--bg-main); color: var(--text-main); border: 1px solid var(--border); font-family: inherit;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Inquiry <i data-lucide="send"></i></button>
+                    </form>
+                </div>
+                <div class="reveal">
+                    <div class="image-box" style="height: 100%;">
+                        <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=800"
+                            alt="Contact Us">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Map -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Global HQ</h2>
+            </div>
+            <div class="map-wrap reveal" style="height: 450px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.540424380278!2d-0.1262361!3d51.5007292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c3224a3517%3A0xe539f0415a77328d!2sBig%20Ben!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                    allowfullscreen="" loading="lazy"></iframe>
+
+                <div class="map-details">
+                    <h4>Global Headquarters</h4>
+                    <p>Saint Margaret St, London SW1P 3JX, United Kingdom</p>
+                    <div class="flex gap-1" style="margin-top: 1rem;">
+                        <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">
+                            <i data-lucide="map-pin"></i> Get Directions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Social Connect -->
+    <section class="section section-variant">
+        <div class="container text-center">
+            <div class="section-title">
+                <h2>Stay in the Loop</h2>
+                <p>Follow us on social media for the latest platform updates and DJ spotlights.</p>
+            </div>
+            <div class="flex-center gap-2" style="flex-wrap: wrap;">
+                <a href="#" class="btn btn-glass" style="padding: 1.5rem; border-radius: 50%; width: 64px; height: 64px; justify-content: center;" title="Twitter"><i data-lucide="twitter" style="width: 24px; height: 24px; margin: 0;"></i></a>
+                <a href="#" class="btn btn-glass" style="padding: 1.5rem; border-radius: 50%; width: 64px; height: 64px; justify-content: center;" title="Instagram"><i data-lucide="instagram" style="width: 24px; height: 24px; margin: 0;"></i></a>
+                <a href="#" class="btn btn-glass" style="padding: 1.5rem; border-radius: 50%; width: 64px; height: 64px; justify-content: center;" title="LinkedIn"><i data-lucide="linkedin" style="width: 24px; height: 24px; margin: 0;"></i></a>
+                <a href="#" class="btn btn-glass" style="padding: 1.5rem; border-radius: 50%; width: 64px; height: 64px; justify-content: center;" title="Slack"><i data-lucide="slack" style="width: 24px; height: 24px; margin: 0;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Support Center CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section reveal text-center" style="background: var(--bg-surface); border: 2px solid var(--primary); box-shadow: 0 0 50px var(--primary-glow); color: var(--text-main);">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 800;">Need Faster Help?</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-muted); font-size: 1.1rem;">Visit our self-service knowledge base for instant answers to over 500+
+                    common questions.</p>
+                <a href="#" class="btn btn-primary">Go to Support Center <i
+                        data-lucide="book-open"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <i data-lucide="radio"></i>
+                        STREAM
+                    </a>
+                    <p>The global leader in professional radio hosting and DJ profile management. Built for creators.
+                    </p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://t.me/magtan_radio" class="btn btn-glass"><i data-lucide="send"></i></a>
+                        <a href="https://instagram.com" class="btn btn-glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="btn btn-glass"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard-admin.html">For Admins</a></li>
+                        <li><a href="dashboard-user.html">For Listeners</a></li>
+                        <li><a href="services.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Stream Inc. All rights reserved.</p>
+                <p>Designed with <i data-lucide="heart" style="width: 14px; color: #ef4444;"></i> for Broadcasters</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.from(el, { x: 20, opacity: 0, duration: 1, scrollTrigger: { trigger: el, start: "top 95%" } });
+        });
+    </script>
+</body>
+
+</html>
+

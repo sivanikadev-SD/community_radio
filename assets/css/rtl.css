@@ -1,0 +1,23 @@
+/* RTL Support Overrides */
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+body[dir="rtl"] .nav-links {
+    padding-right: 0;
+}
+
+body[dir="rtl"] .btn i {
+    margin-right: 0.5rem;
+    margin-left: 0;
+    transform: scaleX(-1);
+}
+
+body[dir="rtl"] .hero-content {
+    text-align: right;
+}
+
+body[dir="rtl"] .player-bar {
+    flex-direction: row-reverse;
+}

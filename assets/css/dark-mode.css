@@ -1,0 +1,20 @@
+/* Dark Mode Overrides */
+/* Note: Most variables are handled in style.css via [data-theme="dark"] */
+
+[data-theme="dark"] .glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .navbar {
+    background: rgba(15, 23, 42, 0.8);
+}
+
+[data-theme="dark"] .player-bar {
+    background: rgba(15, 23, 42, 0.9);
+}
+
+[data-theme="dark"] .btn-primary {
+    background: var(--primary);
+    box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.3);
+}

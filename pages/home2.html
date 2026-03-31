@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicStream — Tune Into Something New</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='2'%3E%3C/circle%3E%3Cpath d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'%3E%3C/path%3E%3C/svg%3E">
+    <meta name="description"
+        content="Discover underground radio, exclusive DJ sets, and live genre stations on SonicStream's alternative channel.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/home2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="h2-body">
+
+    <!-- Navigation -->
+    <nav class="navbar h2-nav" id="h2-nav">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo h2-logo">
+                <i data-lucide="radio"></i>
+                STREAM
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="../index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
+                        <a href="home2.html" class="active"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
+                    </div>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard-admin.html">Admin</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
+                        <a href="dashboard-dj.html"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
+                    </div>
+                </li>
+
+
+                <li class="mobile-only"><a href="login.html"><i data-lucide="log-in"></i> Login</a></li>
+                <li class="mobile-only"><a href="signup.html"><i data-lucide="user-plus"></i> Sign Up</a></li>
+                <li class="mobile-only">
+                    <hr style="opacity: 0.1; margin: 1rem 0;">
+                </li>
+                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                </li>
+                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="desktop-only flex gap-1">
+                    <a href="login.html" class="btn btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Login</a>
+                    <a href="signup.html" class="btn h2-btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Join Free</a>
+                </div>
+                <button id="rtl-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Switch RTL/LTR"><i
+                        data-lucide="arrow-right-left"></i></button>
+                <button id="theme-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Toggle Theme"><i
+                        data-lucide="moon"></i></button>
+                <button id="mobile-menu-toggle" class="mobile-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 1. HERO — Full-Bleed Immersive ===== -->
+    <section class="h2-hero">
+        <div class="h2-hero-bg">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=85&w=1800"
+                alt="DJ Stage" class="h2-hero-bg-img">
+            <div class="h2-hero-overlay"></div>
+        </div>
+
+        <div class="h2-particles" id="h2-particles"></div>
+
+        <div class="container h2-hero-content">
+            <div class="h2-hero-text">
+                <div class="h2-badge">
+                    <span class="h2-badge-dot"></span> 847 listeners active now
+                </div>
+                <h1 class="h2-hero-title">
+                    Where Sound <br><span class="h2-gradient-text">Becomes Culture</span>
+                </h1>
+                <p class="h2-hero-desc">Underground radio, curated live sets, and genre-defining broadcasts — all in
+                    one place. No algorithms. Just music.</p>
+                <div class="h2-hero-actions">
+                    <a href="signup.html" class="btn h2-btn-primary h2-btn-lg">
+                        <i data-lucide="headphones"></i> Start Listening Free
+                    </a>
+                    <a href="#genres" class="btn h2-btn-outline h2-btn-lg">
+                        <i data-lucide="compass"></i> Explore Genres
+                    </a>
+                </div>
+
+                <!-- Mini player teaser -->
+                <div class="h2-mini-player">
+                    <div class="h2-mp-album">
+                        <img src="../assets/image/profile.webp" alt="Album">
+                        <div class="h2-mp-pulse"></div>
+                    </div>
+                    <div class="h2-mp-info">
+                        <p class="h2-mp-title">Midnight Pulse</p>
+                        <p class="h2-mp-artist">DJ Moonlight · Deep House</p>
+                    </div>
+                    <div class="h2-mp-waves">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <a href="dashboard-user.html" class="btn h2-btn-primary"
+                        style="padding: 0.5rem 1rem; font-size: 0.8rem;">
+                        <i data-lucide="play"></i> Tune In
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating station cards -->
+            <div class="h2-hero-stations">
+                <div class="h2-station-card h2-sc-live">
+                    <div class="h2-sc-icon"><i data-lucide="radio"></i></div>
+                    <div>
+                        <p class="h2-sc-label">LIVE</p>
+                        <p class="h2-sc-name">Echo Chamber</p>
+                        <p class="h2-sc-meta">1,240 listeners</p>
+                    </div>
+                    <div class="h2-sc-live-dot"></div>
+                </div>
+                <div class="h2-station-card">
+                    <div class="h2-sc-icon h2-sc-icon-amber"><i data-lucide="music-2"></i></div>
+                    <div>
+                        <p class="h2-sc-label">TECHNO</p>
+                        <p class="h2-sc-name">Steel Waves</p>
+                        <p class="h2-sc-meta">698 listeners</p>
+                    </div>
+                </div>
+                <div class="h2-station-card">
+                    <div class="h2-sc-icon h2-sc-icon-rose"><i data-lucide="mic"></i></div>
+                    <div>
+                        <p class="h2-sc-label">JAZZ</p>
+                        <p class="h2-sc-name">Blue Café Radio</p>
+                        <p class="h2-sc-meta">521 listeners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h2-scroll-arrow">
+            <i data-lucide="chevrons-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== 2. TICKER BAR ===== -->
+    <div class="h2-ticker-wrap">
+        <div class="h2-ticker-track">
+            <span>🎵 Midnight Pulse — DJ Moonlight</span>
+            <span>⚡ Steel Waves — DJ Voltage</span>
+            <span>🌊 Deep Blue — Aria Pulse</span>
+            <span>🔥 Inferno Set — Neon Riot</span>
+            <span>🎷 Blue Café — Marcus Cole</span>
+            <span>🌐 Global Grooves — Echo Core</span>
+            <span>🎵 Midnight Pulse — DJ Moonlight</span>
+            <span>⚡ Steel Waves — DJ Voltage</span>
+            <span>🌊 Deep Blue — Aria Pulse</span>
+            <span>🔥 Inferno Set — Neon Riot</span>
+        </div>
+    </div>
+
+    <!-- ===== 3. FEATURED STATS ===== -->
+    <section class="h2-stats-section">
+        <div class="container">
+            <div class="h2-stats-grid">
+                <div class="h2-stat-card h2-reveal">
+                    <i data-lucide="globe" class="h2-stat-icon"></i>
+                    <h2 class="h2-stat-num">120+</h2>
+                    <p>Countries Tuned In</p>
+                </div>
+                <div class="h2-stat-card h2-reveal">
+                    <i data-lucide="headphones" class="h2-stat-icon"></i>
+                    <h2 class="h2-stat-num">2.4M</h2>
+                    <p>Hours Streamed</p>
+                </div>
+                <div class="h2-stat-card h2-reveal">
+                    <i data-lucide="mic" class="h2-stat-icon"></i>
+                    <h2 class="h2-stat-num">340+</h2>
+                    <p>Independent DJs</p>
+                </div>
+                <div class="h2-stat-card h2-reveal">
+                    <i data-lucide="zap" class="h2-stat-icon"></i>
+                    <h2 class="h2-stat-num">320kbps</h2>
+                    <p>Crystal Clear Audio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. GENRE DISCOVERY ===== -->
+    <section class="h2-section" id="genres">
+        <div class="container">
+            <div class="h2-section-header h2-reveal">
+                <p class="h2-eyebrow">Explore Sounds</p>
+                <h2>Find Your <span class="h2-gradient-text">Frequency</span></h2>
+                <p class="h2-section-desc">From dark techno basements to jazzy rooftop lounges — every genre has a home
+                    on SonicStream.</p>
+            </div>
+
+            <div class="h2-genres-grid">
+                <div class="h2-genre-card h2-genre-lg h2-reveal"
+                    style="background-image: url('../assets/image/dj-2.jpg')">
+                    <div class="h2-genre-overlay"></div>
+                    <div class="h2-genre-content">
+                        <span class="h2-genre-pill">🔥 Trending</span>
+                        <h3>Deep House</h3>
+                        <p>Underground vibes from Berlin to Brooklyn</p>
+                        <div class="h2-genre-meta">
+                            <span><i data-lucide="radio"></i> 48 Live Sets</span>
+                            <span><i data-lucide="users"></i> 12.4K Listeners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h2-genre-card h2-reveal"
+                    style="background-image: url('https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=600')">
+                    <div class="h2-genre-overlay"></div>
+                    <div class="h2-genre-content">
+                        <h3>Jazz & Soul</h3>
+                        <p>Timeless grooves</p>
+                        <div class="h2-genre-meta"><span><i data-lucide="radio"></i> 22 Live</span></div>
+                    </div>
+                </div>
+
+                <div class="h2-genre-card h2-reveal"
+                    style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=600')">
+                    <div class="h2-genre-overlay"></div>
+                    <div class="h2-genre-content">
+                        <h3>Techno</h3>
+                        <p>Hard-hitting industrial beats</p>
+                        <div class="h2-genre-meta"><span><i data-lucide="radio"></i> 35 Live</span></div>
+                    </div>
+                </div>
+
+                <div class="h2-genre-card h2-reveal"
+                    style="background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600')">
+                    <div class="h2-genre-overlay"></div>
+                    <div class="h2-genre-content">
+                        <h3>Acoustic</h3>
+                        <p>Unplugged & intimate</p>
+                        <div class="h2-genre-meta"><span><i data-lucide="radio"></i> 11 Live</span></div>
+                    </div>
+                </div>
+
+                <div class="h2-genre-card h2-reveal"
+                    style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600')">
+                    <div class="h2-genre-overlay"></div>
+                    <div class="h2-genre-content">
+                        <h3>Drum & Bass</h3>
+                        <p>High-octane energy</p>
+                        <div class="h2-genre-meta"><span><i data-lucide="radio"></i> 19 Live</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. SPOTLIGHT ARTISTS ===== -->
+    <section class="h2-section h2-section-dark">
+        <div class="container">
+            <div class="h2-section-header h2-reveal">
+                <p class="h2-eyebrow">This Week's Stars</p>
+                <h2>Artist <span class="h2-gradient-text">Spotlight</span></h2>
+                <p class="h2-section-desc">Hand-picked broadcasters pushing the boundaries of live radio.</p>
+            </div>
+
+            <div class="h2-artists-grid">
+                <!-- Artist 1 -->
+                <div class="h2-artist-card h2-reveal">
+                    <div class="h2-artist-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=400"
+                            alt="DJ Moonlight" class="h2-artist-img">
+                        <div class="h2-artist-live-tag">● LIVE NOW</div>
+                    </div>
+                    <div class="h2-artist-info">
+                        <h4>DJ Moonlight</h4>
+                        <p>Deep House · Berlin</p>
+                        <div class="h2-artist-stats">
+                            <span><i data-lucide="users"></i> 1,245 listening</span>
+                            <span><i data-lucide="heart"></i> 4.8K supporters</span>
+                        </div>
+                        <a href="dashboard-user.html" class="btn h2-btn-primary w-full"
+                            style="margin-top: 1rem; padding: 0.7rem;">Tune In</a>
+                    </div>
+                </div>
+
+                <!-- Artist 2 -->
+                <div class="h2-artist-card h2-artist-featured h2-reveal">
+                    <div class="h2-artist-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=400"
+                            alt="Aria Pulse" class="h2-artist-img">
+                        <div class="h2-artist-crown"><i data-lucide="crown"></i> Top DJ</div>
+                    </div>
+                    <div class="h2-artist-info">
+                        <h4>Aria Pulse</h4>
+                        <p>Jazz & Ambient · New York</p>
+                        <div class="h2-artist-stats">
+                            <span><i data-lucide="users"></i> 3,100 listening</span>
+                            <span><i data-lucide="heart"></i> 12K supporters</span>
+                        </div>
+                        <a href="dashboard-user.html" class="btn h2-btn-primary w-full"
+                            style="margin-top: 1rem; padding: 0.7rem;">Tune In</a>
+                    </div>
+                </div>
+
+                <!-- Artist 3 -->
+                <div class="h2-artist-card h2-reveal">
+                    <div class="h2-artist-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=400"
+                            alt="DJ Voltage" class="h2-artist-img">
+                    </div>
+                    <div class="h2-artist-info">
+                        <h4>DJ Voltage</h4>
+                        <p>Techno & Industrial · Tokyo</p>
+                        <div class="h2-artist-stats">
+                            <span><i data-lucide="users"></i> 890 listening</span>
+                            <span><i data-lucide="heart"></i> 3.2K supporters</span>
+                        </div>
+                        <a href="dashboard-user.html" class="btn h2-btn-outline w-full"
+                            style="margin-top: 1rem; padding: 0.7rem;">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Artist 4 -->
+                <div class="h2-artist-card h2-reveal">
+                    <div class="h2-artist-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400"
+                            alt="Elena Pulse" class="h2-artist-img">
+                    </div>
+                    <div class="h2-artist-info">
+                        <h4>Elena Pulse</h4>
+                        <p>Drum & Bass · London</p>
+                        <div class="h2-artist-stats">
+                            <span><i data-lucide="users"></i> 670 listening</span>
+                            <span><i data-lucide="heart"></i> 2.1K supporters</span>
+                        </div>
+                        <a href="dashboard-user.html" class="btn h2-btn-outline w-full"
+                            style="margin-top: 1rem; padding: 0.7rem;">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. HOW SONICSTREAM WORKS ===== -->
+    <section class="h2-section">
+        <div class="container">
+            <div class="h2-section-header h2-reveal">
+                <p class="h2-eyebrow">Platform Guide</p>
+                <h2>Radio Reimagined — <span class="h2-gradient-text">For Everyone</span></h2>
+            </div>
+
+            <div class="h2-steps">
+                <div class="h2-step h2-reveal">
+                    <div class="h2-step-num">01</div>
+                    <div class="h2-step-icon"><i data-lucide="user-plus"></i></div>
+                    <div class="h2-step-content">
+                        <h4>Create Your Account</h4>
+                        <p>Sign up free in seconds. No credit card required. Instantly access thousands of live stations
+                            and archived sets.</p>
+                    </div>
+                </div>
+                <div class="h2-step-connector h2-reveal"></div>
+                <div class="h2-step h2-reveal">
+                    <div class="h2-step-num">02</div>
+                    <div class="h2-step-icon"><i data-lucide="search"></i></div>
+                    <div class="h2-step-content">
+                        <h4>Discover Your Genre</h4>
+                        <p>Use our genre explorer, real-time charts, and curated playlists to find exactly the sound
+                            you're after.</p>
+                    </div>
+                </div>
+                <div class="h2-step-connector h2-reveal"></div>
+                <div class="h2-step h2-reveal">
+                    <div class="h2-step-num">03</div>
+                    <div class="h2-step-icon"><i data-lucide="heart"></i></div>
+                    <div class="h2-step-content">
+                        <h4>Support the Artist</h4>
+                        <p>Donate directly while listening. 100% goes to the DJ — no platform cut. Build a real
+                            relationship with your favourite artists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. LIVE SCHEDULE ===== -->
+    <section class="h2-section h2-section-dark" id="schedule">
+        <div class="container">
+            <div class="h2-section-header h2-reveal">
+                <p class="h2-eyebrow">Don't Miss Out</p>
+                <h2>Today's <span class="h2-gradient-text">Lineup</span></h2>
+                <p class="h2-section-desc">Set your reminders and never miss a live broadcast again.</p>
+            </div>
+
+            <div class="h2-schedule-table h2-reveal">
+                <div class="h2-schedule-row h2-schedule-live">
+                    <div class="h2-sr-time">
+                        <span class="h2-live-badge">● LIVE</span>
+                        <p>Now</p>
+                    </div>
+                    <div class="h2-sr-artist">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=60"
+                            alt="DJ" class="h2-sr-avatar">
+                        <div>
+                            <h5>Midnight Pulse</h5>
+                            <p>DJ Moonlight</p>
+                        </div>
+                    </div>
+                    <div class="h2-sr-genre"><span class="h2-genre-tag">Deep House</span></div>
+                    <div class="h2-sr-listeners"><i data-lucide="headphones"></i> 1,245</div>
+                    <div class="h2-sr-action">
+                        <a href="dashboard-user.html" class="btn h2-btn-primary" style="padding: 0.5rem 1.2rem;">Tune
+                            In</a>
+                    </div>
+                </div>
+
+                <div class="h2-schedule-row">
+                    <div class="h2-sr-time">
+                        <p class="h2-sr-upcoming">Upcoming</p>
+                        <p>9:00 PM</p>
+                    </div>
+                    <div class="h2-sr-artist">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=60"
+                            alt="DJ" class="h2-sr-avatar">
+                        <div>
+                            <h5>Echo Chamber</h5>
+                            <p>Elena Pulse</p>
+                        </div>
+                    </div>
+                    <div class="h2-sr-genre"><span class="h2-genre-tag h2-gt-alt">Drum & Bass</span></div>
+                    <div class="h2-sr-listeners"><i data-lucide="headphones"></i> —</div>
+                    <div class="h2-sr-action">
+                        <button class="btn btn-glass" style="padding: 0.5rem 1.2rem;"><i data-lucide="bell"></i>
+                            Remind</button>
+                    </div>
+                </div>
+
+                <div class="h2-schedule-row">
+                    <div class="h2-sr-time">
+                        <p class="h2-sr-upcoming">Upcoming</p>
+                        <p>11:30 PM</p>
+                    </div>
+                    <div class="h2-sr-artist">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=60"
+                            alt="DJ" class="h2-sr-avatar">
+                        <div>
+                            <h5>Steel Waves</h5>
+                            <p>DJ Voltage</p>
+                        </div>
+                    </div>
+                    <div class="h2-sr-genre"><span class="h2-genre-tag h2-gt-techno">Techno</span></div>
+                    <div class="h2-sr-listeners"><i data-lucide="headphones"></i> —</div>
+                    <div class="h2-sr-action">
+                        <button class="btn btn-glass" style="padding: 0.5rem 1.2rem;"><i data-lucide="bell"></i>
+                            Remind</button>
+                    </div>
+                </div>
+
+                <div class="h2-schedule-row">
+                    <div class="h2-sr-time">
+                        <p class="h2-sr-upcoming">Tomorrow</p>
+                        <p>2:00 PM</p>
+                    </div>
+                    <div class="h2-sr-artist">
+                        <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=60"
+                            alt="DJ" class="h2-sr-avatar">
+                        <div>
+                            <h5>Blue Café Sessions</h5>
+                            <p>Aria Pulse</p>
+                        </div>
+                    </div>
+                    <div class="h2-sr-genre"><span class="h2-genre-tag h2-gt-jazz">Jazz</span></div>
+                    <div class="h2-sr-listeners"><i data-lucide="headphones"></i> —</div>
+                    <div class="h2-sr-action">
+                        <button class="btn btn-glass" style="padding: 0.5rem 1.2rem;"><i data-lucide="bell"></i>
+                            Remind</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. WHY SONICSTREAM (Features) ===== -->
+    <section class="h2-section">
+        <div class="container">
+            <div class="h2-features-split">
+                <div class="h2-features-img-side h2-reveal">
+                    <div class="h2-img-stack">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=700"
+                            alt="Studio" class="h2-img-main">
+                        <div class="h2-img-overlay-card">
+                            <i data-lucide="zap" style="color: var(--h2-amber);"></i>
+                            <div>
+                                <p style="font-weight: 800; margin: 0; font-size: 1.5rem;">99.9%</p>
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">Stream Uptime</p>
+                            </div>
+                        </div>
+                        <div class="h2-img-overlay-card h2-ioc-bottom">
+                            <i data-lucide="shield-check" style="color: var(--h2-green);"></i>
+                            <div>
+                                <p style="font-weight: 800; margin: 0;">End-to-End Encrypted</p>
+                                <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">Your data, protected
+                                    always</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h2-features-text-side h2-reveal">
+                    <p class="h2-eyebrow">Why Choose Us</p>
+                    <h2>More Than Just Radio — It's a <span class="h2-gradient-text">Movement</span></h2>
+
+                    <div class="h2-feature-items">
+                        <div class="h2-feature-item">
+                            <div class="h2-fi-icon"><i data-lucide="volume-2"></i></div>
+                            <div>
+                                <h5>Hi-Fi 320kbps Streaming</h5>
+                                <p>Crystal clear audio that makes you feel like you're in the room with the DJ.</p>
+                            </div>
+                        </div>
+                        <div class="h2-feature-item">
+                            <div class="h2-fi-icon h2-fi-amber"><i data-lucide="coins"></i></div>
+                            <div>
+                                <h5>Direct Artist Donations</h5>
+                                <p>Zero platform fees. Every cent you donate goes straight to the artist's wallet.</p>
+                            </div>
+                        </div>
+                        <div class="h2-feature-item">
+                            <div class="h2-fi-icon h2-fi-green"><i data-lucide="globe"></i></div>
+                            <div>
+                                <h5>Global Edge Network</h5>
+                                <p>240+ edge nodes worldwide for sub-100ms latency no matter where you listen.</p>
+                            </div>
+                        </div>
+                        <div class="h2-feature-item">
+                            <div class="h2-fi-icon h2-fi-rose"><i data-lucide="award"></i></div>
+                            <div>
+                                <h5>Listener Badges & Perks</h5>
+                                <p>Earn exclusive badges, get early access to sets, and unlock backstage content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="services.html" class="btn h2-btn-primary" style="margin-top: 2.5rem;">
+                        See All Features <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. TESTIMONIALS ===== -->
+    <section class="h2-section h2-section-dark">
+        <div class="container">
+            <div class="h2-section-header h2-reveal">
+                <p class="h2-eyebrow">The Community</p>
+                <h2>Heard From The <span class="h2-gradient-text">Dance Floor</span></h2>
+            </div>
+
+            <div class="h2-testimonials h2-reveal">
+                <div class="h2-testi-card">
+                    <div class="h2-testi-quote">"</div>
+                    <p>"The moment I pushed Play on SonicStream I knew I'd found a new home for my sets. The donation
+                        flow is genius — my fans actually USE it!"</p>
+                    <div class="h2-testi-author">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=80"
+                            alt="DJ" class="h2-testi-avatar">
+                        <div>
+                            <h6>DJ Moonlight</h6>
+                            <small>Berlin · 1,245 listeners</small>
+                        </div>
+                        <div class="h2-testi-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="h2-testi-card h2-testi-featured">
+                    <div class="h2-testi-quote">"</div>
+                    <p>"I listen for 4 hours a day. The audio quality is unlike anything else out there — you can hear
+                        EVERYTHING. And supporting DJs directly feels amazing."</p>
+                    <div class="h2-testi-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=80"
+                            alt="User" class="h2-testi-avatar">
+                        <div>
+                            <h6>Mark Peterson</h6>
+                            <small>Dedicated Listener · New York</small>
+                        </div>
+                        <div class="h2-testi-stars">★★★★★</div>
+                    </div>
+                </div>
+
+                <div class="h2-testi-card">
+                    <div class="h2-testi-quote">"</div>
+                    <p>"Managing our community station has never been easier. The analytics tell me exactly when we
+                        peak and lets us plan better content."</p>
+                    <div class="h2-testi-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=80"
+                            alt="Elena" class="h2-testi-avatar">
+                        <div>
+                            <h6>Elena Pulse</h6>
+                            <small>Station Owner · London</small>
+                        </div>
+                        <div class="h2-testi-stars">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10. DJ RECRUITMENT CTA ===== -->
+    <section class="h2-section">
+        <div class="container">
+            <div class="h2-dj-cta h2-reveal">
+                <div class="h2-dj-cta-bg"></div>
+                <div class="h2-dj-cta-content">
+                    <div class="h2-dj-cta-img">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600"
+                            alt="Go Live">
+                    </div>
+                    <div class="h2-dj-cta-text">
+                        <p class="h2-eyebrow">Are You a DJ?</p>
+                        <h2>Broadcast Your Sound to the <span class="h2-gradient-text">World</span></h2>
+                        <p>Set up your DJ profile, go live in minutes, and start earning through direct listener
+                            support. Join 340+ independent artists already streaming.</p>
+                        <ul class="h2-dj-perks">
+                            <li><i data-lucide="check-circle"></i> Free to start, no monthly fees</li>
+                            <li><i data-lucide="check-circle"></i> Keep 100% of listener donations</li>
+                            <li><i data-lucide="check-circle"></i> Pro analytics & show scheduling tools</li>
+                            <li><i data-lucide="check-circle"></i> Global audience from day one</li>
+                        </ul>
+                        <div class="flex gap-1" style="flex-wrap: wrap;">
+                            <a href="signup.html" class="btn h2-btn-primary h2-btn-lg">Start Broadcasting <i
+                                    data-lucide="mic"></i></a>
+                            <a href="dashboard-dj.html" class="btn h2-btn-outline h2-btn-lg">See DJ Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 11. NEWSLETTER ===== -->
+    <section class="h2-newsletter-section h2-reveal">
+        <div class="container">
+            <div class="h2-newsletter-inner">
+                <div>
+                    <h3>Stay On The Frequency</h3>
+                    <p>Weekly drops: new DJs, upcoming events, and exclusive listener perks.</p>
+                </div>
+                <form class="h2-newsletter-form" onsubmit="return false;">
+                    <input type="email" placeholder="your@email.com" class="h2-nl-input">
+                    <button type="submit" class="btn h2-btn-primary">Subscribe <i data-lucide="send"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <i data-lucide="radio"></i>
+                        STREAM
+                    </a>
+                    <p>The global leader in professional radio hosting and DJ profile management. Built for creators.
+                    </p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://t.me/magtan_radio" class="btn btn-glass"><i data-lucide="send"></i></a>
+                        <a href="https://instagram.com" class="btn btn-glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="btn btn-glass"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard-admin.html">For Admins</a></li>
+                        <li><a href="dashboard-user.html">For Listeners</a></li>
+                        <li><a href="services.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Stream Inc. All rights reserved.</p>
+                <p>Designed with <i data-lucide="heart" style="width: 14px; color: #ef4444;"></i> for Broadcasters</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate reveals
+        gsap.utils.toArray('.h2-reveal').forEach(el => {
+            gsap.from(el, {
+                y: 60, opacity: 0, duration: 1, ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('h2-nav');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Particle effect in hero
+        const container = document.getElementById('h2-particles');
+        if (container) {
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElement('div');
+                p.className = 'h2-particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDelay = Math.random() * 8 + 's';
+                p.style.animationDuration = (5 + Math.random() * 10) + 's';
+                p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+
+</html>
+

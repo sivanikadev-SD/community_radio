@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/dashboard-admin.html
+Disallow: /pages/dashboard-dj.html
+
+Sitemap: https://yourdomain.com/sitemap.xml

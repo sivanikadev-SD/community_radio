@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services | SonicStream</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='2'%3E%3C/circle%3E%3Cpath d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'%3E%3C/path%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo">
+                <i data-lucide="radio"></i>
+                STREAM
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="../index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
+                        <a href="home2.html"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
+                    </div>
+                </li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard-admin.html">Admin</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
+                        <a href="dashboard-dj.html"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
+                    </div>
+                </li>
+
+
+                <li class="mobile-only"><a href="login.html"><i data-lucide="log-in"></i> Login</a></li>
+                <li class="mobile-only"><a href="signup.html"><i data-lucide="user-plus"></i> Sign Up</a></li>
+                <li class="mobile-only">
+                    <hr style="opacity: 0.1; margin: 1rem 0;">
+                </li>
+                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                </li>
+                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="desktop-only flex gap-1">
+                    <a href="login.html" class="btn btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Login</a>
+                    <a href="signup.html" class="btn btn-primary" style="text-decoration: none;" style="padding: 0.6rem 1.2rem;">Sign Up</a>
+                </div>
+
+                <button id="rtl-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Switch RTL/LTR"><i
+                        data-lucide="arrow-right-left"></i></button>
+                <button id="theme-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Toggle Theme"><i
+                        data-lucide="moon"></i></button>
+
+                <button id="mobile-menu-toggle" class="mobile-toggle"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Header -->
+    <section class="section hero-bg" style="padding-top: 15rem; background: url('../assets/image/dj.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <div class="container text-center reveal">
+            <h1 style="font-size: 5rem; margin-bottom: 2rem;">World-Class <span>Audio Solutions</span></h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Comprehensive
+                services designed for independent broadcasters and enterprise radio stations alike.</p>
+        </div>
+    </section>
+
+        <!-- 2. Quality focus & FAQ -->
+    <style>
+        .accordion { width: 100%; }
+        .accordion-item { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-md); margin-bottom: 1rem; overflow: hidden; transition: all 0.3s ease; }
+        .accordion-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; margin: 0; }
+        .accordion-header:hover { background: var(--bg-main); }
+        .accordion-content { max-height: 0; padding: 0 1.5rem; opacity: 0; transition: all 0.3s ease; }
+        .accordion-item.active .accordion-content { max-height: 200px; padding: 0 1.5rem 1.5rem 1.5rem; opacity: 1; }
+        .accordion-item.active .accordion-icon { transform: rotate(180deg); }
+        .accordion-icon { transition: transform 0.3s ease; color: var(--primary); }
+    </style>
+    <section class="section">
+        <div class="container grid grid-2" style="align-items: start; gap: 4rem;">
+            
+            <div class="reveal">
+                <div class="image-box" style="margin-bottom: 2rem; ">
+                    <img src="../assets/image/about.webp" alt="Audio Quality">
+                </div>
+                <h2>Uncompromising Audio Quality</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">We provide 320kbps Opus-encoded audio as standard. Our technology ensures that every bass note and vocal nuance is transmitted exactly as the creator intended.</p>
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                        <li class="flex gap-1"><i data-lucide="check-circle" style="color: var(--primary);"></i> Sub-second Latency</li>
+                        <li class="flex gap-1"><i data-lucide="check-circle" style="color: var(--primary);"></i> Adaptive Bitrate Streaming</li>
+                        <li class="flex gap-1"><i data-lucide="check-circle" style="color: var(--primary);"></i> Multi-format Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <h2 style="margin-bottom: 2rem;">Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                            Can I record my live shows?
+                            <i data-lucide="chevron-down" class="accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin:0;">Yes, Pro plans include automatic cloud recording and archiving for all live broadcasts, allowing you to easily publish them later.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                            What percentage do you take from donations?
+                            <i data-lucide="chevron-down" class="accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin:0;">SonicStream takes 0% commission for Pro users. Free users incur a 5% fee. The only other fees are standard payment processing fees from our partners.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                            Do I need special hardware to broadcast?
+                            <i data-lucide="chevron-down" class="accordion-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin:0;">No, you can start broadcasting directly from your web browser. However, for the best audio quality, we recommend using a DJ controller and a dedicated audio interface.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-variant">
+        <div class="container text-center">
+            <div class="section-title">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Designed for independent creators and professional studios.</p>
+            </div>
+            <div class="grid grid-3" style="align-items: end;">
+                <div class="glass-card reveal" style="padding: 2.5rem 1.5rem; border-top: 4px solid var(--text-muted);">
+                    <h3 style="margin-bottom: 0.5rem;">Basic</h3>
+                    <p style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Free</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; min-height: 150px;">
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> 128kbps Audio Streaming</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> Public Profile</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> Accept Donations (5% fee)</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary" style="display: block; width: 100%; text-decoration: none; font-size: 1.1rem; padding: 0.8rem;">Join Now</a>
+                </div>
+                <div class="glass-card reveal" style="padding: 3rem 1.5rem; border: 2px solid var(--primary); box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.2); transform: scale(1.05); z-index: 2;">
+                    <div style="background: var(--primary); color: white; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 1rem;">MOST POPULAR</div>
+                    <h3 style="margin-bottom: 0.5rem;">Pro Broadcaster</h3>
+                    <p style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">$19<span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/mo</span></p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; min-height: 150px;">
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--primary); width:16px;"></i> 320kbps Lossless Audio</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--primary); width:16px;"></i> 0% Donation Fees</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--primary); width:16px;"></i> Cloud Recording & Archives</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--primary); width:16px;"></i> Custom Analytics</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary" style="display: block; width: 100%; text-decoration: none; font-size: 1.1rem; padding: 0.8rem;">Join Now</a>
+                </div>
+                <div class="glass-card reveal" style="padding: 2.5rem 1.5rem; border-top: 4px solid var(--text-muted);">
+                    <h3 style="margin-bottom: 0.5rem;">Enterprise Station</h3>
+                    <p style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">Custom</p>
+                    <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 2rem; min-height: 150px;">
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> Multi-DJ Management</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> 24/7 dedicated support</li>
+                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check" style="color:var(--accent); width:16px;"></i> White-label apps</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="display: block; width: 100%; text-decoration: none; font-size: 1.1rem; padding: 0.8rem;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <i data-lucide="radio"></i>
+                        STREAM
+                    </a>
+                    <p>The global leader in professional radio hosting and DJ profile management. Built for creators.
+                    </p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://t.me/magtan_radio" class="btn btn-glass"><i data-lucide="send"></i></a>
+                        <a href="https://instagram.com" class="btn btn-glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="btn btn-glass"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard-admin.html">For Admins</a></li>
+                        <li><a href="dashboard-user.html">For Listeners</a></li>
+                        <li><a href="services.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Stream Inc. All rights reserved.</p>
+                <p>Designed with <i data-lucide="heart" style="width: 14px; color: #ef4444;"></i> for Broadcasters</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.from(el, { scale: 0.95, opacity: 0, duration: 1, scrollTrigger: { trigger: el, start: "top 95%" } });
+        });
+    </script>
+</body>
+
+</html>

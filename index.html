@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicStream | The Pulse of Global Radio</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='2'%3E%3C/circle%3E%3Cpath d='M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14'%3E%3C/path%3E%3C/svg%3E">
+    <meta name="description"
+        content="Experience high-fidelity radio streaming and manage your DJ profile with SonicStream.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Scripts & Fonts -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="main-nav">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i data-lucide="radio"></i>
+                STREAM
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
+                        <a href="pages/home2.html"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
+                    </div>
+                </li>
+                
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/dashboard-admin.html">Admin</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="pages/dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
+                        <a href="pages/dashboard-dj.html"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
+                    </div>
+                </li>
+
+
+                <li class="mobile-only"><a href="pages/login.html"><i data-lucide="log-in"></i> Login</a></li>
+                <li class="mobile-only"><a href="pages/signup.html"><i data-lucide="user-plus"></i> Sign Up</a></li>
+                <li class="mobile-only">
+                    <hr style="opacity: 0.1; margin: 1rem 0;">
+                </li>
+                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                </li>
+                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="desktop-only flex gap-1">
+                    <a href="pages/login.html" class="btn btn-primary"
+                        style="padding: 0.6rem 1.2rem; text-decoration: none;">Login</a>
+                    <a href="pages/signup.html" class="btn btn-primary"
+                        style="padding: 0.6rem 1.2rem; text-decoration: none;">Sign Up</a>
+                </div>
+
+                <button id="rtl-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Switch RTL/LTR"><i
+                        data-lucide="arrow-right-left"></i></button>
+                <button id="theme-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Toggle Theme"><i
+                        data-lucide="moon"></i></button>
+
+                <button id="mobile-menu-toggle" class="mobile-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="hero">
+        <div class="container hero-main">
+            <div class="hero-text reveal">
+                <div class="badge"
+                    style="display:inline-block; padding: 0.5rem 1rem; background: var(--primary-glow); border-radius: 2rem; color: var(--primary); font-weight: 800; font-size: 0.75rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px;">
+                    Next Gen Streaming Platform
+                </div>
+                <h1>Empowering the Global <span>Audio Revolution</span></h1>
+                <p>From underground beats to global broadcasts, SonicStream provides the ultimate toolkit for DJs,
+                    stations, and listeners to connect in high fidelity.</p>
+                <div class="flex gap-1">
+                    <a href="pages/signup.html" class="btn btn-primary">Join the Frequency <i data-lucide="zap"></i></a>
+                    <a href="#trending" class="btn btn-glass">Explore Channels <i data-lucide="mic"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1000"
+                        alt="Studio Setup">
+                </div>
+                <div class="glass-card"
+                    style="position: absolute; bottom: -2rem; right: -2rem; padding: 1.5rem; max-width: 250px;">
+                    <div class="flex-between">
+                        <div>
+                            <p style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted);">Live
+                                Nodes</p>
+                            <h3 style="font-size: 2rem; margin: 0;">1,540</h3>
+                        </div>
+                        <i data-lucide="activity" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Stats Banner -->
+    <section class="container" style="padding: 0;">
+        <div class="stats-banner reveal">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2>$2.5M</h2>
+                    <p>Listener Donations</p>
+                </div>
+                <div class="stat-item">
+                    <h2>850k+</h2>
+                    <p>Monthly Streams</p>
+                </div>
+                <div class="stat-item">
+                    <h2>200+</h2>
+                    <p>DJs Online</p>
+                </div>
+                <div class="stat-item">
+                    <h2>99.9%</h2>
+                    <p>Server Uptime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Trending Shows -->
+    <section class="section" id="trending">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trending Live Shows</h2>
+                <p>Support your favorite artists through direct donations while listening to the best live sets.</p>
+            </div>
+
+            <div class="shows-grid">
+                <div class="show-card reveal">
+                    <img src="assets/image/dj.jpg" class="show-img" alt="Deep Pulse">
+                    <div class="live-tag">
+                        <div class="live-dot"></div> LIVE
+                    </div>
+                    <div class="show-overlay">
+                        <div class="flex-between">
+                            <div>
+                                <p style="color: var(--primary); font-weight: 800; font-size: 0.75rem;">DEEP HOUSE</p>
+                                <h3>Midnight Pulse</h3>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Donate <i
+                                    data-lucide="heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-card reveal">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600"
+                        class="show-img" alt="Techno Beat">
+                    <div class="live-tag">
+                        <div class="live-dot"></div> LIVE
+                    </div>
+                    <div class="show-overlay">
+                        <div class="flex-between">
+                            <div>
+                                <p style="color: var(--secondary); font-weight: 800; font-size: 0.75rem;">TECHNO</p>
+                                <h3>Echo Chamber</h3>
+                            </div>
+                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Donate <i
+                                    data-lucide="heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-card reveal">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=600"
+                        class="show-img" alt="Jazz Flow">
+                    <div class="live-tag" style="background: var(--text-muted);">UPCOMING</div>
+                    <div class="show-overlay">
+                        <h3>Jazz & Chill Sessions</h3>
+                        <p style="opacity: 0.7; font-size: 0.9rem;">Starts in 45 mins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. How it Works (New Section) -->
+    <section class="section section-variant">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Sonic Experience</h2>
+                <p>Building the gap between creators and listeners with a seamless platform.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="radio"></i></div>
+                    <h4>1. Set Up Profile</h4>
+                    <p>DJs create professional profiles, upload their archive, and schedule upcoming live shows with
+                        ease.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="music-2"></i></div>
+                    <h4>2. Go Live</h4>
+                    <p>Stream in high-fidelity 320kbps audio to a global audience with sub-second latency for real-time
+                        interaction.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="coins"></i></div>
+                    <h4>3. Get Supported</h4>
+                    <p>Listeners donate directly to artists while they play, fostering a sustainable independent music
+                        ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Support & Donation Focus (New Section) -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 6rem;">
+                <div class="reveal">
+                    <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem;">Support Your <span>Favorite
+                            Artists</span> Directly</h2>
+                    <p style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem;">We've built a
+                        donation infrastructure that ensures 100% of listener support goes to the artists. No hidden
+                        fees, just pure support for the music you love.</p>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <li class="flex gap-1" style="align-items: center;">
+                            <div style="color: var(--accent);"><i data-lucide="shield-check"></i></div>
+                            <span>Secure Encrypted Transactions</span>
+                        </li>
+                        <li class="flex gap-1" style="align-items: center;">
+                            <div style="color: var(--accent);"><i data-lucide="clock"></i></div>
+                            <span>Real-time Payouts for DJs</span>
+                        </li>
+                        <li class="flex gap-1" style="align-items: center;">
+                            <div style="color: var(--accent);"><i data-lucide="award"></i></div>
+                            <span>Listener Badges and Rewards</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800"
+                            alt="Support Music">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Features Breakdown -->
+    <section class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Enterprise Power for Everyone</h2>
+                <p>The tech stack of a global station, available for every independent creator.</p>
+            </div>
+
+            <div class="feature-list">
+                <div class="glass-card reveal">
+                    <i data-lucide="bar-chart-3" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Advanced Analytics</h4>
+                    <p>Track listener retention, geographic hotspots, and donation trends in real-time.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <i data-lucide="layers" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Playlist Management</h4>
+                    <p>Drag-and-drop playlist builder with auto-crossfade and smart track leveling.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <i data-lucide="smartphone" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Mobile Focused</h4>
+                    <p>Listeners can tune in and donate from any device with our optimized mobile web app.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <i data-lucide="globe" style="color: var(--primary); margin-bottom: 1.5rem;"></i>
+                    <h4>Global Nodes</h4>
+                    <p>Our edge computing network ensures high-fidelity sound whether you're in Berlin or Bali.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Community Testimonials (New Section) -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Community Says</h2>
+                <p>Join thousands of DJs and listeners who have found their home on SonicStream.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="testimonial-card reveal">
+                    <p style="font-style: italic; opacity: 0.9;">"SonicStream changed how I monetize my sets. The
+                        donation feature is so seamless that listeners actually enjoy supporting me live."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100"
+                            class="user-avatar" alt="User">
+                        <div>
+                            <h5 style="margin: 0;">DJ Moonlight</h5>
+                            <small style="color: var(--text-muted);">Pro Broadcaster</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p style="font-style: italic; opacity: 0.9;">"As a listener, I love being able to support my
+                        favorite artists directly. The audio quality is the best I've heard on any platform."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
+                            class="user-avatar" alt="User">
+                        <div>
+                            <h5 style="margin: 0;">Mark Peterson</h5>
+                            <small style="color: var(--text-muted);">Dedicated Listener</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p style="font-style: italic; opacity: 0.9;">"The analytics are a game changer. I finally know
+                        exactly what track my audience loves and where they're tuning in from."</p>
+                    <div class="user-info">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100"
+                            class="user-avatar" alt="User">
+                        <div>
+                            <h5 style="margin: 0;">Elena Pulse</h5>
+                            <small style="color: var(--text-muted);">Station Owner</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section reveal">
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;">Ready to take the stage?</h2>
+                <p style="margin-bottom: 3rem; font-size: 1.25rem;">Join thousands of broadcasters building the future
+                    of audio.</p>
+                <div class="flex-center gap-1">
+                    <a href="pages/signup.html" class="btn" style="background: white; color: var(--primary);">Join
+                        Now</a>
+                    <a href="pages/contact.html" class="btn btn-glass"
+                        style="color: white; border-color: rgba(255,255,255,0.3);">Talk to Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="radio"></i>
+                        STREAM
+                    </a>
+                    <p>The global leader in professional radio hosting and DJ profile management. Built for creators.
+                    </p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://t.me/magtan_radio" class="btn btn-glass"><i data-lucide="send"></i></a>
+                        <a href="https://instagram.com" class="btn btn-glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="btn btn-glass"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/dashboard-admin.html">For Admins</a></li>
+                        <li><a href="pages/dashboard-user.html">For Listeners</a></li>
+                        <li><a href="pages/services.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Careers</a></li>
+                        <li><a href="pages/contact.html">Support</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Stream Inc. All rights reserved.</p>
+                <p>Designed with <i data-lucide="heart" style="width: 14px; color: #ef4444;"></i> for Broadcasters</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Hero & Section Animations
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('.reveal').forEach(elem => {
+            gsap.from(elem, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

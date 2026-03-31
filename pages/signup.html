@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SonicStream</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div style="position: absolute; top: 2rem; left: 2rem; z-index: 100;">
+        <a href="../index.html" class="btn btn-glass" style="padding: 0.5rem 1rem;"><i data-lucide="arrow-left"></i> Home</a>
+    </div>
+
+    <div class="auth-container">
+        <div class="glass-card auth-card">
+            <div class="auth-header" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <a href="../index.html" class="logo" style="margin-bottom: 2rem; font-size: 2rem;">
+                    <i data-lucide="radio" style="width: 32px; height: 32px;"></i>
+                    STREAM
+                </a>
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Join the <span>Frequency</span></h1>
+                <p style="color: var(--text-muted);">Start your broadcasting journey today</p>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Wick" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@continental.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2rem;">By creating an account,
+                    you agree to our <a href="#" style="color: var(--primary);">Terms of Service</a> and <a href="#"
+                        style="color: var(--primary);">Privacy Policy</a>.</p>
+                <button type="submit" class="btn btn-primary w-full" style="padding: 1rem;">Create Account <i
+                        data-lucide="zap"></i></button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

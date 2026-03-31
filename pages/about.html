@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SonicStream</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i data-lucide="radio"></i>
+                STREAM
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-menu-header">
+                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
+                </li>
+                
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="../index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
+                        <a href="home2.html"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
+                    </div>
+                </li>
+                
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard-admin.html">Admin</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
+                            style="width:16px;"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
+                        <a href="dashboard-dj.html"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
+                    </div>
+                </li>
+
+
+                <li class="mobile-only"><a href="login.html"><i data-lucide="log-in"></i> Login</a></li>
+                <li class="mobile-only"><a href="signup.html"><i data-lucide="user-plus"></i> Sign Up</a></li>
+                <li class="mobile-only">
+                    <hr style="opacity: 0.1; margin: 1rem 0;">
+                </li>
+                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                </li>
+                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="desktop-only flex gap-1">
+                    <a href="login.html" class="btn btn-glass" style="padding: 0.6rem 1.2rem;">Login</a>
+                    <a href="signup.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem;">Sign Up</a>
+                </div>
+
+                <button id="rtl-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Switch RTL/LTR"><i
+                        data-lucide="languages"></i></button>
+                <button id="theme-toggle" class="btn btn-glass" style="padding: 0.6rem;" title="Toggle Theme"><i
+                        data-lucide="moon"></i></button>
+
+                <button id="mobile-menu-toggle" class="mobile-toggle"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </nav>
+
+        <!-- 1. Hero -->
+    <section class="section" style="padding-top: 12rem; background-image: url('../assets/image/profile.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container pb-4">
+            <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                <div class="reveal">
+                    <h1 style="font-size: clamp(3rem, 5vw, 5rem); margin-bottom: 1.5rem; line-height: 1.1;">The Architecture of <span class="h2-gradient-text">Sound</span></h1>
+                </div>
+                <div class="reveal" style="padding: 1rem; border-left: 2px solid var(--primary);">
+                    <p style="font-size: 1.25rem; color: var(--text-muted); margin: 0;">SonicStream was founded by a collective of DJs and engineers with a single mission: to create a platform where global audio can thrive without technical barriers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 6rem;">
+                <div class="reveal">
+                    <div class="image-box">
+                        <img src="../assets/image/about.jpg" alt="Founder Story">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h2 class="mb-2">From Warehouse to Worldwide</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">In 2021, we started as a small internal
+                        tool for a pirate radio station in East London. We quickly realized that the challenges of
+                        low-latency streaming and fair artist compensation were universal.</p>
+                    <p>Today, SonicStream powers over 150 independent stations across 40 countries, processing millions
+                        in listener donations and providing a stage for thousands of creative voices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- 3. Values -->
+    <section class="section section-variant">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide every feature we build.</p>
+            </div>
+            <div class="grid grid-3 core-vals-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); display: grid; /* Force 3 columns at most */">
+                <style>
+                    @media (min-width: 1024px) {
+                        .core-vals-grid { grid-template-columns: repeat(3, 1fr) !important; }
+                    }
+                </style>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="heart"></i></div>
+                    <h3>Artist Independence</h3>
+                    <p style="color: var(--text-muted);">We believe artists should own their community and revenue, directly.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="cpu"></i></div>
+                    <h3>Technical Perfection</h3>
+                    <p style="color: var(--text-muted);">Our global edge network ensures your set sounds perfect, anywhere in the world.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="shield"></i></div>
+                    <h3>Radical Transparency</h3>
+                    <p style="color: var(--text-muted);">From payout structures to server status, we keep everything open.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="globe"></i></div>
+                    <h3>Global Community</h3>
+                    <p style="color: var(--text-muted);">We connect people beyond borders through the universal language of music.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="zap"></i></div>
+                    <h3>Innovation</h3>
+                    <p style="color: var(--text-muted);">Constantly pushing the boundaries of real-time streaming technologies.</p>
+                </div>
+                <div class="glass-card reveal">
+                    <div class="feature-icon"><i data-lucide="music-4"></i></div>
+                    <h3>Audio Quality First</h3>
+                    <p style="color: var(--text-muted);">Uncompressed 320kbps streams. We never compromise on sound quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Awards & Recognition -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0;">
+        <div class="container">
+            <div class="glass-card flex-center gap-4 reveal" style="padding: 1.5rem 3rem; border-radius: 4rem; justify-content: space-between; flex-wrap: nowrap; overflow-x: auto;">
+                <h3 style="margin:0; font-size: 1.25rem; white-space: nowrap;">Awards & Recognition:</h3>
+                
+                <div class="flex gap-1" style="align-items: center; justify-content: center; color: var(--text-main); font-weight: 700; white-space: nowrap;">
+                    <i data-lucide="award" style="width: 28px; height: 28px; color: var(--primary);"></i>
+                    <span>Best Audio Tech 2024</span>
+                </div>
+                
+                <div class="flex gap-1" style="align-items: center; justify-content: center; color: var(--text-main); font-weight: 700; white-space: nowrap;">
+                    <i data-lucide="star" style="width: 28px; height: 28px; color: var(--primary);"></i>
+                    <span>Top Streaming Platform</span>
+                </div>
+                
+                <div class="flex gap-1" style="align-items: center; justify-content: center; color: var(--text-main); font-weight: 700; white-space: nowrap;">
+                    <i data-lucide="trophy" style="width: 28px; height: 28px; color: var(--primary);"></i>
+                    <span>Community Pick</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Global Impact -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Global Presence</h2>
+                <p>Scaling audio across every continent.</p>
+            </div>
+            <div class="stats-grid reveal" style="margin-bottom: 5rem;">
+                <div class="stat-item">
+                    <h2>85%</h2>
+                    <p>Independent DJs</p>
+                </div>
+                <div class="stat-item">
+                    <h2>1.2M</h2>
+                    <p>Daily Sessions</p>
+                </div>
+                <div class="stat-item">
+                    <h2>4.8/5</h2>
+                    <p>Host Rating</p>
+                </div>
+                <div class="stat-item">
+                    <h2>30+</h2>
+                    <p>Data Nodes</p>
+                </div>
+            </div>
+            <div class="image-box reveal" style="max-height: 400px;">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200"
+                    alt="Global Network">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Team -->
+    <section class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Leadership</h2>
+                <p>The minds driving the next generation of audio.</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="text-center reveal">
+                    <div
+                        style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 3px solid var(--primary-glow);">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200"
+                            alt="CEO" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4>Marcus Neon</h4>
+                    <p style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">CEO & FOUNDER</p>
+                </div>
+                <div class="text-center reveal">
+                    <div
+                        style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 3px solid var(--primary-glow);">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                            alt="CTO" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4>Sarah Echo</h4>
+                    <p style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">CHIEF ENGINEER</p>
+                </div>
+                <div class="text-center reveal">
+                    <div
+                        style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 3px solid var(--primary-glow);">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200"
+                            alt="Product" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4>David Rhythm</h4>
+                    <p style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">HEAD OF PRODUCT</p>
+                </div>
+                <div class="text-center reveal">
+                    <div
+                        style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; border: 3px solid var(--primary-glow);">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200"
+                            alt="Community" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h4>Elena Pulse</h4>
+                    <p style="color: var(--primary); font-size: 0.85rem; font-weight: 700;">COMMUNITY LEAD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Partnerships -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted Partners</h2>
+                <p>We work with the best in audio technology and music licensing.</p>
+            </div>
+            <div class="flex-center gap-4" style="flex-wrap: wrap; opacity: 0.6;">
+                <i data-lucide="music-4" style="width: 60px; height: 60px;"></i>
+                <i data-lucide="speaker" style="width: 60px; height: 60px;"></i>
+                <i data-lucide="headphones" style="width: 60px; height: 60px;"></i>
+                <i data-lucide="disc" style="width: 60px; height: 60px;"></i>
+                <i data-lucide="radio-tower" style="width: 60px; height: 60px;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i data-lucide="radio"></i>
+                        STREAM
+                    </a>
+                    <p>The global leader in professional radio hosting and DJ profile management. Built for creators.
+                    </p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="https://t.me/magtan_radio" class="btn btn-glass"><i data-lucide="send"></i></a>
+                        <a href="https://instagram.com" class="btn btn-glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" class="btn btn-glass"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dashboard-admin.html">For Admins</a></li>
+                        <li><a href="dashboard-user.html">For Listeners</a></li>
+                        <li><a href="services.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid var(--border); padding-top: 3rem; display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 0.9rem;">
+                <p>&copy; 2026 Stream Inc. All rights reserved.</p>
+                <p>Designed with <i data-lucide="heart" style="width: 14px; color: #ef4444;"></i> for Broadcasters</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.from(el, { y: 30, opacity: 0, duration: 1, scrollTrigger: { trigger: el, start: "top 90%" } });
+        });
+    </script>
+</body>
+
+</html>
