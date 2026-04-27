@@ -14,7 +14,6 @@
         .dashboard-container {
             display: flex;
             min-height: 100vh;
-            padding-top: 80px;
         }
 
         .sidebar {
@@ -23,7 +22,7 @@
             border-right: 1px solid var(--border);
             padding: 2rem;
             position: fixed;
-            height: calc(100vh - 80px);
+            height: 100vh;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
@@ -107,68 +106,6 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="main-nav">
-        <div class="container nav-content">
-            <a href="../index.html" class="logo">
-                <i data-lucide="radio"></i>
-                STREAM
-            </a>
-
-            <ul class="nav-links" id="nav-menu">
-                <li class="mobile-menu-header">
-                    <a href="../index.html" class="logo">
-                        <i data-lucide="radio"></i>
-                        STREAM
-                    </a>
-                    <button class="close-menu" id="close-menu-btn"><i data-lucide="x"></i></button>
-                </li>
-                
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Home <i data-lucide="chevron-down"
-                            style="width:16px;"></i></a>
-                    <div class="nav-dropdown-content">
-                        <a href="../index.html"><i data-lucide="home" style="width:14px;"></i> Home 1</a>
-                        <a href="home2.html"><i data-lucide="layout" style="width:14px;"></i> Home 2</a>
-                    </div>
-                </li>
-                
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="dashboard-admin.html">Admin</a></li>
-                <li class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle">Dashboards <i data-lucide="chevron-down"
-                            style="width:16px;"></i></a>
-                    <div class="nav-dropdown-content">
-                        <a href="dashboard-user.html"><i data-lucide="user" style="width:14px;"></i> User</a>
-                        <a href="dashboard-dj.html" class="active"><i data-lucide="mic" style="width:14px;"></i> DJ</a>
-                    </div>
-                </li>
-
-                <li class="mobile-only">
-                    <hr style="opacity: 0.1; margin: 1rem 0;">
-                </li>
-                <li class="mobile-only"><a href="#" class="rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
-                </li>
-                <li class="mobile-only"><a href="#" class="theme-btn"><i data-lucide="moon"></i> Theme</a></li>
-            </ul>
-
-            <div class="nav-actions">
-                <div class="flex gap-1"
-                    style="align-items: center; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid var(--border);">
-                    <div
-                        style="width: 32px; height: 32px; border-radius: 50%; background: var(--secondary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8rem;">
-                        AL</div>
-                    <div class="desktop-only">
-                        <p style="font-weight: 700; font-size: 0.85rem; margin: 0; line-height: 1.2;">Alex Neon</p>
-                    </div>
-                </div>
-                <button id="rtl-toggle" class="btn btn-glass" title="RTL"><i data-lucide="arrow-right-left"></i></button>
-                <button id="sidebar-toggle" class="btn btn-glass desktop-hidden" title="Sidebar" style="margin-right: 0.5rem;"><i data-lucide="layout"></i></button>
-                <button id="mobile-menu-toggle" class="mobile-toggle"><i data-lucide="menu"></i></button>
-            </div>
-        </div>
-    </nav>
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
     <!-- <div class="dashboard-container"> -->
     <!-- <div class="sidebar-overlay" id="sidebar-overlay"> -->
