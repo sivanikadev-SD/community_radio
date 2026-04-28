@@ -17,10 +17,10 @@
         }
 
         .sidebar {
-            width: 280px;
+            width: 260px;
             background: var(--bg-surface);
             border-right: 1px solid var(--border);
-            padding: 2rem;
+            padding: 2rem 0;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
@@ -32,7 +32,7 @@
 
         .main-content {
             flex: 1;
-            margin-left: 280px;
+            margin-left: 260px;
             padding: 3rem;
             background: var(--bg-main);
         }
@@ -42,6 +42,7 @@
             align-items: center;
             gap: 1rem;
             padding: 0.875rem 1.25rem;
+            margin: 0.25rem 1rem;
             border-radius: var(--radius-md);
             color: var(--text-muted);
             font-weight: 600;
@@ -54,6 +55,18 @@
             background: var(--primary);
             color: white;
             box-shadow: 0 4px 12px var(--primary-glow);
+        }
+
+        #logout-btn {
+            background: rgba(239, 68, 68, 0.05) !important;
+            color: #ef4444 !important;
+            margin-top: 2rem !important;
+        }
+
+        #logout-btn:hover {
+            background: #ef4444 !important;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
         }
 
         .stats-grid {
@@ -111,6 +124,12 @@
     <!-- <div class="sidebar-overlay" id="sidebar-overlay"> -->
         <!-- Sidebar -->
         <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="../index.html" class="logo">
+                    <i data-lucide="radio"></i>
+                    STREAM
+                </a>
+            </div>
             <div class="sidebar-nav" style="display: flex; flex-direction: column; gap: 0.5rem;">
                 <a href="#" class="nav-item active" data-section="overview">
                     <i data-lucide="layout-dashboard"></i> Overview
@@ -127,7 +146,13 @@
                 <a href="#" class="nav-item" data-section="profile">
                     <i data-lucide="user"></i> DJ Profile
                 </a>
-                <a href="#" class="nav-item" id="logout-btn" style="color: #ef4444; margin-top: 2rem;">
+                <a href="#" class="nav-item theme-btn" style="margin-top: 2rem;">
+                    <i data-lucide="moon"></i> Dark Mode
+                </a>
+                <a href="#" class="nav-item rtl-btn">
+                    <i data-lucide="languages"></i> RTL Mode
+                </a>
+                <a href="#" class="nav-item" id="logout-btn">
                     <i data-lucide="log-out"></i> Logout
                 </a>
             </div>

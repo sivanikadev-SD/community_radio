@@ -19,11 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateThemeIcon = (theme) => {
         const btns = document.querySelectorAll('#theme-toggle, .theme-btn, #theme-toggle-mobile');
         btns.forEach(btn => {
-            btn.innerHTML = theme === 'light' ?
-                '<i data-lucide="moon"></i>' :
-                '<i data-lucide="sun"></i>';
-            if (btn.classList.contains('mobile-only') || btn.id === 'theme-toggle-mobile') {
-                btn.innerHTML += theme === 'light' ? ' Dark Mode' : ' Light Mode';
+            const isDark = theme === 'dark';
+            const icon = isDark ? 'sun' : 'moon';
+            const label = isDark ? 'Light Mode' : 'Dark Mode';
+
+            if (btn.classList.contains('nav-item') || btn.classList.contains('admin-nav-item') || btn.classList.contains('mobile-only') || btn.id === 'theme-toggle-mobile') {
+                btn.innerHTML = `<i data-lucide="${icon}"></i> ${label}`;
+            } else {
+                btn.innerHTML = `<i data-lucide="${icon}"></i>`;
             }
         });
         if (window.lucide) lucide.createIcons();

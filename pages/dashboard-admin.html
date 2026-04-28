@@ -12,40 +12,55 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .admin-nav-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius-sm);
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-    font-size: 0.95rem;
-}
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            margin: 0.25rem 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
 
-.admin-nav-item:hover {
-    background: rgba(99, 102, 241, 0.05);
-    color: var(--primary);
-    transform: translateX(4px);
-}
+        .admin-nav-item:hover {
+            background: var(--primary-glow);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
 
-.admin-nav-item.active {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
-    color: var(--primary);
-    font-weight: 700;
-}
+        .admin-nav-item.active {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.1));
+            color: var(--primary);
+            font-weight: 700;
+            border: 1px solid var(--primary-glow);
+        }
 
-.sidebar-label {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-}
+        #logout-btn {
+            background: rgba(239, 68, 68, 0.05) !important;
+            color: #ef4444 !important;
+            margin-top: 0.5rem;
+        }
+
+        #logout-btn:hover {
+            background: #ef4444 !important;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+        }
+
+        .sidebar-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            opacity: 0.7;
+        }
 .dashboard-section {
     display: flex;
     flex-direction: column;
@@ -198,6 +213,12 @@
     <div class="admin-container">
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
      <aside class="sidebar">
+            <div class="sidebar-brand">
+                <a href="../index.html" class="logo">
+                    <i data-lucide="radio"></i>
+                    STREAM
+                </a>
+            </div>
 
 
             <span class="sidebar-label">Operations</span>
@@ -214,7 +235,9 @@
             <a href="#" class="admin-nav-item" data-section="config"><i data-lucide="settings"></i> Platform Config</a>
 
             <div style="margin-top:auto;padding:.75rem 0;border-top:1px solid var(--border);">
-                <a href="../index.html" class="admin-nav-item" style="color:#ef4444;"><i data-lucide="log-out"></i>
+                <a href="#" class="admin-nav-item theme-btn"><i data-lucide="moon"></i> Dark Mode</a>
+                <a href="#" class="admin-nav-item rtl-btn"><i data-lucide="languages"></i> RTL Mode</a>
+                <a href="../index.html" class="admin-nav-item" id="logout-btn"><i data-lucide="log-out"></i>
                     Logout</a>
             </div>
         </aside>
